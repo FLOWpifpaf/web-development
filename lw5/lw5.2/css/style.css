@@ -1,0 +1,511 @@
+.background
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.png');
+    background-position: 0 50px;
+    background-repeat: no-repeat;
+}
+
+.panel
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel__navbar
+{
+    display: flex;
+    width: 960px;
+}
+
+.navbar__element
+{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 45px;
+    padding-right: 22px;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 32px;
+    color: #333333;
+    font-family: "Georgia";
+}
+
+.icom-man
+{
+    background: url(../images/littleman.png) no-repeat 5px;
+    background-position: 20px 17px;
+}
+
+.icom-heart
+{
+    background: url(../images/heart.png) no-repeat 5px;
+    background-position: 20px 18px;
+}
+
+.icon-camera
+{
+    background: url(../images/camera.png) no-repeat 5px;
+    background-position: 19px 17px;
+}
+
+.icon-camera:hover
+{
+    background: url(../images/camera-white.png) no-repeat 5px;
+    background-position: 20px 17px;
+    color: white;
+    background-color: #15a98c;
+}
+
+.icom-heart:hover
+{
+    background: url(../images/heart-white.png) no-repeat 5px;
+    background-position: 20px 18px;
+    color: white;
+    background-color: #15a98c;
+}
+
+.icom-man:hover
+{
+    background: url(../images/man-white.png) no-repeat 5px;
+    background-position: 19px 17px;
+    color: white;
+    background-color: #15a98c;
+}
+
+.container
+{
+    font-size: 0;
+    margin: 210px auto 0 auto;
+    width: 960px;
+}
+
+.block-content
+{
+    vertical-align: top;
+    margin-left: 60px;
+    width: 570px;
+    display: inline-block;
+    float: right;
+}
+
+.title
+{
+   width: 100%;
+}
+
+.title__quote
+{
+    margin: 25px 3px 1px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-style: italic;
+    font-family: "Georgia";
+}
+
+.title__author
+{
+    margin: 2px 6px;
+    font-size: 16px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+
+.block
+{
+    margin-top: 82px;
+    width: 100%;
+}
+
+.block__writer
+{
+    margin-left: 4px;
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.block__content
+{
+    margin-top: 43px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.block__hobby
+{
+    margin: 49px 0 5px;
+    font-size: 36px;
+    line-height: 27px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.hobby
+{
+    width: 100%;
+    margin-top: 23px;
+}
+
+.write-me
+{
+    margin-top: 39px;
+}
+
+.write-me_link
+{
+     text-decoration: none;
+     color: #15a98b;
+}
+
+.link__hyperlink
+{
+     border-bottom: 1px solid #15a98b;
+     font: 19px/36px Georgia;
+}
+
+.link__hyperlink:hover
+{
+     color: #098d72;
+     border-bottom: 1px solid #098d72;
+}
+
+.arrow
+{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.block-page
+{
+    width: 330px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+.favorit
+{
+    margin-top: 45px;
+}
+
+.favorit__header
+{
+    margin: 13px 0px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+
+.indented-title
+{
+    margin: 41px 0px 10px;
+}
+
+.favorit__list
+{
+    padding-left: 4px;
+}
+
+.list__item
+{
+    padding-left: 17px;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.point
+{
+    list-style: none;
+    background: url(../images/marker.png) no-repeat 0 15px;
+}
+
+.list
+{
+    margin-top: 12px;
+    padding-left: 0;
+}
+
+.number
+{
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.block-movies
+{
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.block-movies__storage
+{
+    width: 1200px;
+}
+
+.storage__cinema
+{
+    margin: 91px 0px 33px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.storage__pages
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pages__descriptions
+{
+    width: 285px;
+}
+
+.descriptions__movies
+{
+    margin: 19px 0 17px 0;
+    display: flex;
+    vertical-align: top;
+    font-size: 22px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.descriptions__content
+{
+    font-size: 16px;
+    line-height: 28px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.block-movies__button
+{
+    margin: 38px 20px 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.button__films
+{
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    background-color: #15a98c;
+    width: 220px;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+
+}
+.button__films:hover
+{
+    background-color: #098d71;
+}
+
+.content__button:focus,
+.button__films:focus
+{
+    outline: none;
+}
+
+.form
+{
+    margin: 55px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__header
+{
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__line
+{
+    display: inline-flex;
+    width: 200px;
+    height: 1px;
+    border: 0;
+    background-color: rgb(211, 211, 211);
+}
+
+.header__text
+{
+    text-transform: uppercase;
+    margin: 0 26px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 300;
+    font-family: "Open Sans";
+}
+
+.form__content
+{
+    width: 540px;
+    margin: 66px 0 48px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__text
+{
+    padding-bottom: 5px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.content__text_red::after
+{
+    content: " *";
+    color: red;
+}
+
+.content__printing
+{
+    margin-bottom: 25px;
+    width: 496px;
+    height: 45px;
+    border-radius: 3px;
+    border: 2px solid #c9c9c9;
+    padding: 0 20px;
+}
+
+.content__country
+{
+    margin-bottom: 40px;
+    width: 540px;
+    height: 49px;
+    border-radius: 3px;
+    padding: 0 17px;
+    appearance: none;
+    border: 2px solid #a6a6a6;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 498px 17px;
+}
+
+.country__item
+{
+    font-size: 18px;
+    line-height: 32px;
+    color: #555555;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.content__radio
+{
+    padding-bottom: 35px;
+}
+
+.radio
+{
+    margin: 0 36px 0 3px;
+    padding-bottom: 5px;
+    color: #333333;
+    font: 400 18px/32px "Open Sans";
+}
+
+.radio__item
+{
+    margin: 0;
+}
+
+.content__write
+{
+    width: 532px;
+    height: 140px;
+    border-radius: 3px;
+    resize: none;
+    border: 2px solid #c9c9c9;
+}
+
+.content__button
+{
+    margin-top: 50px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #f5f5f5;
+    font-family: "Georgia";
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #15a98c;
+    border: 0;
+}
+
+.content__printing:hover,
+.content__country:hover,
+.radio__item:hover,
+.content__write:hover
+{
+    border: 2px solid #15a98c;
+}
+
+.content__printing:focus,
+.content__country:focus,
+.radio__item:focus,
+.content__write:focus
+{
+    outline: none;
+    border: 2px solid #838383;
+}
+
+.content__button:hover
+{
+    background-color: #098d71;
+}
+
+.postscript
+{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postcript__paragarph
+{
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+    background-color: #f9f9f9;
+}
+
+
