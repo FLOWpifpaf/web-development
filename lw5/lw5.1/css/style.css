@@ -1,0 +1,183 @@
+.container
+{
+    font-size: 0;
+    margin: 100px auto 0 auto;
+    width: 960px;
+}
+
+.block-content
+{
+    vertical-align: top;
+    margin-left: 60px;
+    width: 570px;
+    display: inline-block;
+    float: right;
+}
+
+.title
+{
+    margin-top: 50px;
+    height: 300px;
+}
+
+.title__quote
+{
+    margin-top: -18px;
+    margin-left: 60px;
+    width: 500px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #848484;
+    font-style: italic;
+    font-family: "Georgia";
+}
+
+.title__author
+{
+    margin-top: -26px;
+    margin-left: 67px;
+    font-size: 16px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+
+.block
+{
+    margin-top: 50px;
+    height: 770px;
+}
+
+.block__writer
+{
+    margin-top: -5px;
+    margin-left: 4px;
+    font-size: 48px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.block__content
+{
+    margin-top: 43px;
+    margin-left: 0px;
+    width: 561px;
+    height: 198px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.block__hobby
+{
+    margin-top: 36px;
+    margin-left: -2px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.hobby
+{
+    margin-top: -15px;
+    margin-left: 0px;
+    width: 562px;
+    height: 263px;
+}
+
+.link
+{
+     text-decoration: none;
+     width: 562px;
+     height: 263px;
+     color: #15a98b;
+}
+
+.block__link-shift
+{
+     margin-top: -83px;
+}
+
+.link__hyperlink
+{
+     border-bottom: 1px solid #15a98b;
+     font: 19px/36px Georgia;
+}
+
+.link__hyperlink:hover
+{
+     color: #1AE496;
+     border-bottom: 1px solid #1AE496;
+}
+
+.arrow
+{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.block-page
+{
+    width: 330px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+.favorit
+{
+    margin-top: 50px;
+    height: 770px
+}
+
+.favorit__header
+{
+    margin-top: -5px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #15a98c;
+    font-weight: 600;
+    font-family: "Open Sans";
+}
+
+.indented-title
+{
+    margin-top: 41px;
+}
+
+.favorit__list
+{
+    margin-top: -11px;
+    margin-left: -35px;
+}
+
+.list
+{
+    width: 330px;
+}
+
+.list__item
+{
+    padding-left: 17px;
+    font-size: 19px;
+    line-height: 36px;
+    color: #555555;
+    font-family: "Georgia";
+}
+
+.point
+{
+    list-style: none;
+    background: url(../images/marker.png) no-repeat 0 15px;
+}
+
+.number
+{
+    margin-left: -21px;
+    list-style-position: inside;
+}
