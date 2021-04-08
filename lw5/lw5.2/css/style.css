@@ -5,6 +5,7 @@
     background-image: url('../images/background.png');
     background-position: 0 50px;
     background-repeat: no-repeat;
+    height: 50px;
 }
 
 .panel
@@ -79,8 +80,10 @@
 .container
 {
     font-size: 0;
-    margin: 210px auto 0 auto;
+    margin: 210px auto 10px auto; 
     width: 960px;
+    height: 879px;
+    margin-bottom: 0px;
 }
 
 .block-content
@@ -257,6 +260,7 @@
 .clear
 {
     clear: both;
+    margin-bottom: 65px;;
 }
 
 .block-movies__storage
@@ -266,7 +270,7 @@
 
 .storage__cinema
 {
-    margin: 91px 0px 33px;
+    margin: 26px 0px 33px;
     font-size: 36px;
     line-height: 42px;
     color: #333333;
@@ -414,6 +418,7 @@
     appearance: none;
     border: 2px solid #a6a6a6;
     background-image: url(../images/arrow.png);
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: 498px 17px;
 }
@@ -492,20 +497,21 @@
 
 .postscript
 {
+    width: 100%;
+    background-color: #f9f9f9;
     height: 70px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .postcript__paragarph
 {
     margin-right: 20px;
+    margin-top: 19px;
     font-size: 16px;
     line-height: 32px;
     color: #555555;
     font-family: "Georgia";
-    background-color: #f9f9f9;
 }
 
 
