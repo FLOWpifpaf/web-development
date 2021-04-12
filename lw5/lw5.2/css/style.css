@@ -12,7 +12,6 @@
 {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .panel__navbar
@@ -57,7 +56,7 @@
 {
     background: url(../images/camera-white.png) no-repeat 5px;
     background-position: 20px 17px;
-    color: white;
+    color: #fff;
     background-color: #15a98c;
 }
 
@@ -79,16 +78,14 @@
 
 .container
 {
-    font-size: 0;
     margin: 210px auto 10px auto; 
     width: 960px;
-    height: 879px;
-    margin-bottom: 0px;
+    height: 900px;
+    margin-bottom: 49px;
 }
 
 .block-content
 {
-    vertical-align: top;
     margin-left: 60px;
     width: 570px;
     display: inline-block;
@@ -129,6 +126,7 @@
 .block__writer
 {
     margin-left: 4px;
+    margin-bottom: 23px;
     font-size: 48px;
     line-height: 42px;
     color: #333333;
@@ -138,7 +136,7 @@
 
 .block__content
 {
-    margin-top: 43px;
+    margin-top: 40px;
     width: 100%;
     font-size: 19px;
     line-height: 32px;
@@ -193,14 +191,12 @@
 .block-page
 {
     width: 330px;
-    display: inline-block;
-    vertical-align: top;
     float: left;
 }
 
 .favorit
 {
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
 .favorit__header
@@ -260,7 +256,6 @@
 .clear
 {
     clear: both;
-    margin-bottom: 65px;;
 }
 
 .block-movies__storage
@@ -292,8 +287,6 @@
 .descriptions__movies
 {
     margin: 19px 0 17px 0;
-    display: flex;
-    vertical-align: top;
     font-size: 22px;
     line-height: 32px;
     color: #333333;
@@ -356,7 +349,6 @@
 
 .header__line
 {
-    display: inline-flex;
     width: 200px;
     height: 1px;
     border: 0;
