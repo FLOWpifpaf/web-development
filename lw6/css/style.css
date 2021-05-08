@@ -23,7 +23,7 @@
     padding-right: 22px;
     text-decoration: none;
     font: 19px/32px "Georgia";
-    color: #333333;
+    color: #333;
 }
 
 .icom-man
@@ -136,7 +136,7 @@
 
 .arrow
 {
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid #fff;
 }
 
 .container
@@ -291,7 +291,7 @@
 {
     padding-bottom: 5px;
     font: 400 20px/32px "Open Sans";
-    color: #333333;
+    color: #333;
 }
 
 .content__text_red::after
@@ -337,7 +337,7 @@
 
 .radio
 {
-    color: #333333;
+    color: #333;
     font: 400 18px/32px "Open Sans";
     margin: 0 36px 0 3px;
 }
@@ -383,12 +383,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 -6%;
+    background-color: #f9f9f9;
 }
 
 .postcript__paragarph
 {
     font: 16px/32px "Georgia";
-    color: #555555;
+    color: #555;
     text-align: center;
 }
 
@@ -608,7 +610,7 @@
     
     .title
     {
-        align-self: start;
+        margin-top: 50px;
     }
 
     .write-me
