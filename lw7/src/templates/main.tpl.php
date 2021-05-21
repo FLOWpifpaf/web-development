@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../web/css/style.css">
 </head>
 <body class="background">
-<header class="panel">
+  <header class="panel">
     <div class="panel__navbar">
       <div class="navbar__element">
         <a href="#about-me" class="icon icom-man">Обо мне</a>
@@ -200,7 +200,9 @@
       <?php if (isset($args['about-me_error_msg'])): ?>
         <p class="errors"><?php echo $args['about-me_error_msg']; ?></p>
       <?php endif; ?>
-      <button class="content__button" type="submit">Отправить</button>
+      <div class="block-movies__button send">
+      <button class="button__films" type="submit">Отправить</button>
+      </div>
     </form>
   </div>
   <footer class="postscript">
