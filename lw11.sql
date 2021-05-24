@@ -1,6 +1,6 @@
 CREATE DATABASE `univesity`;
 
-USE `univesity`; 
+USE `univesity`;
 
 CREATE TABLE `faculty`
 (
@@ -8,16 +8,17 @@ CREATE TABLE `faculty`
     `name_faculty` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`faculty_id`)
 )
-	DEFAULT CHARACTER SET `utf8mb4`
-    COLLATE `utf8mb4_unicode_ci`;
-    
+	DEFAULT CHARACTER SET `utf8mb4` /*Установка кодировки таблицы*/
+    COLLATE `utf8mb4_unicode_ci`; /*способ, с помощью которого следует упорядовачивать и сравнивать данные БД(способ сортировки)*/
     
 CREATE TABLE `group`
 (
+
 	`group_id` INT AUTO_INCREMENT NOT NULL,
     `faculty_id` INT NOT NULL,
     `name_group` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`group_id`)
+    PRIMARY KEY (`group_id`),
+    FOREIGN KEY (`faculty_id`) REFERENCES `faculty` (`faculty_id`) ON UPDATE CASCADE ON DELETE CASCADE
 )
 	DEFAULT CHARACTER SET `utf8mb4`
     COLLATE `utf8mb4_unicode_ci`;
@@ -30,81 +31,91 @@ CREATE TABLE `students`
     `last_name` VARCHAR(255) NOT NULL,
     `patronymic` VARCHAR(255) NOT NULL,
     `age` INT NOT NULL,
-    PRIMARY KEY (`students_id`)
+    PRIMARY KEY (`students_id`),
+	FOREIGN KEY (`group_id`) REFERENCES `group` (`group_id`) ON UPDATE CASCADE ON DELETE CASCADE
 )
 	DEFAULT CHARACTER SET `utf8mb4`
     COLLATE `utf8mb4_unicode_ci`;
+ 
+INSERT INTO faculty
+    (name_faculty)
+VALUES
+    ('Факультет информатики и вычислительной техники'),
+    ('Институт леса и природопользования'),
+    ('Институт строительства и архитектуры');
     
- INSERT INTO `faculty` SET `name_faculty` = 'Фкультет информатики и вычислительной техники';
- INSERT INTO `faculty` SET `name_faculty` = 'Институт леса и природопользования';
- INSERT INTO `faculty` SET `name_faculty` = 'Институт строительства и архитектуры';
- 
- INSERT INTO `group` SET `faculty_id` = '1', `name_group` = 'ПС-13';
- INSERT INTO `group` SET `faculty_id` = '1', `name_group` = 'ИВТ-12';
- INSERT INTO `group` SET `faculty_id` = '1', `name_group` = 'ИБ-11';
- 
- INSERT INTO `group` SET `faculty_id` = '2', `name_group` = 'ЛД-13';
- INSERT INTO `group` SET `faculty_id` = '2', `name_group` = 'ИСиТ-12';
- INSERT INTO `group` SET `faculty_id` = '2', `name_group` = 'ТЛиДП-11';
- 
- INSERT INTO `group` SET `faculty_id` = '3', `name_group` = 'ИСиТ-13';
- INSERT INTO `group` SET `faculty_id` = '3', `name_group` = 'СУЗиС-12';
- INSERT INTO `group` SET `faculty_id` = '3', `name_group` = 'ЗиД-11';
- 
- INSERT INTO `students` SET `group_id` = '1', `last_name` = 'Зорина', `first_name` = 'Варвара',  `patronymic` = 'Ивановна', `age` = 19;
- INSERT INTO `students` SET `group_id` = '1', `last_name` = 'Петрова', `first_name` = 'Вера',  `patronymic` = 'Макаровна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '1', `last_name` = 'Демин', `first_name` = 'Тихон',  `patronymic` = 'Александрович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '1', `last_name` = 'Казакова', `first_name` = 'Анна',  `patronymic` = 'Александровна', `age` = 19;
- INSERT INTO `students` SET `group_id` = '1', `last_name` = 'Игнатов', `first_name` = 'Семён',  `patronymic` = 'Никитич', `age` = 16;
- 
- INSERT INTO `students` SET `group_id` = '2', `last_name` = 'Кузин', `first_name` = 'Лепс',  `patronymic` = 'Сергеевич', `age` = 19;
- INSERT INTO `students` SET `group_id` = '2', `last_name` = 'Латышев', `first_name` = 'Богдан',  `patronymic` = 'Александрович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '2', `last_name` = 'Зайцев', `first_name` = 'Илья',  `patronymic` = 'Григорьевич', `age` = 17;
- INSERT INTO `students` SET `group_id` = '2', `last_name` = 'Петров', `first_name` = 'Михаил',  `patronymic` = 'Егорович', `age` = 18;
- INSERT INTO `students` SET `group_id` = '2', `last_name` = 'Николаев', `first_name` = 'Семён',  `patronymic` = 'Виторович', `age` = 18;
- 
- INSERT INTO `students` SET `group_id` = '3', `last_name` = 'Зверев', `first_name` = 'Владимир',  `patronymic` = 'Максимович', `age` = 18;
- INSERT INTO `students` SET `group_id` = '3', `last_name` = 'Зубкова', `first_name` = 'Аделина',  `patronymic` = 'Адамовна', `age` = 19;
- INSERT INTO `students` SET `group_id` = '3', `last_name` = 'Грибов', `first_name` = 'Матвей',  `patronymic` = 'Романович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '3', `last_name` = 'Сергеев', `first_name` = 'Игорь',  `patronymic` = 'Михайлович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '3', `last_name` = 'Сергеев', `first_name` = 'Игорь',  `patronymic` = 'Михайлович', `age` = 17;
- 
- INSERT INTO `students` SET `group_id` = '4', `last_name` = 'Евдокимова', `first_name` = 'Ксения',  `patronymic` = 'Богдановна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '4', `last_name` = 'Басова', `first_name` = 'Ксения',  `patronymic` = 'Сергеевна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '4', `last_name` = 'Лебедев', `first_name` = 'Тимофей',  `patronymic` = 'Львович', `age` = 19;
- INSERT INTO `students` SET `group_id` = '4', `last_name` = 'Сомова', `first_name` = 'Алия',  `patronymic` = 'Львовна', `age` = 17;
- INSERT INTO `students` SET `group_id` = '4', `last_name` = 'Сергеев', `first_name` = 'Тимофей',  `patronymic` = 'Артёмович', `age` = 17;
- 
- INSERT INTO `students` SET `group_id` = '5', `last_name` = 'Соловьев', `first_name` = 'Дмитрий',  `patronymic` = 'Александрович', `age` = 16;
- INSERT INTO `students` SET `group_id` = '5', `last_name` = 'Абрамов', `first_name` = 'Кирилл',  `patronymic` = 'Денисович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '5', `last_name` = 'Некрасова', `first_name` = 'Каролина',  `patronymic` = 'Ярославовна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '5', `last_name` = 'Сергеев', `first_name` = 'Дмитрий',  `patronymic` = 'Иванович', `age` = 18;
- INSERT INTO `students` SET `group_id` = '5', `last_name` = 'Павлова ', `first_name` = 'Милана',  `patronymic` = 'Марковна', `age` = 18;
- 
- INSERT INTO `students` SET `group_id` = '6', `last_name` = 'Сахаров', `first_name` = 'Лев',  `patronymic` = 'Саввич', `age` = 20;
- INSERT INTO `students` SET `group_id` = '6', `last_name` = 'Максимов', `first_name` = 'Сергей',  `patronymic` = 'Павлович', `age` = 19;
- INSERT INTO `students` SET `group_id` = '6', `last_name` = 'Карасева', `first_name` = 'Анастасия',  `patronymic` = 'Дмитриевна', `age` = 22;
- INSERT INTO `students` SET `group_id` = '6', `last_name` = 'Никулина', `first_name` = 'Кира',  `patronymic` = 'Леоновна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '6', `last_name` = 'Наумова', `first_name` = 'Елизавета',  `patronymic` = 'Михайловна', `age` = 18;
- 
- INSERT INTO `students` SET `group_id` = '7', `last_name` = 'Зуева', `first_name` = 'Лидия',  `patronymic` = 'Марковна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '7', `last_name` = 'Попов', `first_name` = 'Николай',  `patronymic` = 'Максимович', `age` = 18;
- INSERT INTO `students` SET `group_id` = '7', `last_name` = 'Виноградова', `first_name` = 'Алёна',  `patronymic` = 'Артёмовна', `age` = 17;
- INSERT INTO `students` SET `group_id` = '7', `last_name` = 'Попов', `first_name` = 'Александр',  `patronymic` = 'Романович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '7', `last_name` = 'Павлова', `first_name` = 'София',  `patronymic` = 'Степановна', `age` = 19;
- 
- INSERT INTO `students` SET `group_id` = '8', `last_name` = 'Жукова ', `first_name` = 'Кристина',  `patronymic` = 'Михайловна', `age` = 17;
- INSERT INTO `students` SET `group_id` = '8', `last_name` = 'Дубровина ', `first_name` = 'Елизавета',  `patronymic` = 'Павловна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '8', `last_name` = 'Антонова', `first_name` = 'Ксения',  `patronymic` = 'Ивановна', `age` = 20;
- INSERT INTO `students` SET `group_id` = '8', `last_name` = 'Кузнецова ', `first_name` = 'Мария',  `patronymic` = 'Михайловна', `age` = 18;
- INSERT INTO `students` SET `group_id` = '8', `last_name` = 'Сергеев', `first_name` = 'Матвей',  `patronymic` = 'Сергеевич', `age` = 17;
- 
- INSERT INTO `students` SET `group_id` = '9', `last_name` = 'Юдин', `first_name` = 'Владимир',  `patronymic` = 'Максимович', `age` = 17;
- INSERT INTO `students` SET `group_id` = '9', `last_name` = 'Попов', `first_name` = 'Матвей',  `patronymic` = 'Дмитриевич', `age` = 19;
- INSERT INTO `students` SET `group_id` = '9', `last_name` = 'Григорий', `first_name` = 'Лепс',  `patronymic` = 'Виторович', `age` = 18;
- INSERT INTO `students` SET `group_id` = '9', `last_name` = 'Джекман', `first_name` = 'Хью',  `patronymic` = 'Вовивич', `age` = 19;
- INSERT INTO `students` SET `group_id` = '9', `last_name` = 'Медведев', `first_name` = 'Паддингтон',  `patronymic` = 'Михайлович', `age` = 19;
+INSERT INTO `group`
+    (name_group, faculty_id)
+VALUES
+    ('ПС-13', 1),
+    ('ИВТ-12', 1),
+    ('ИБ-11', 1),
     
+    ('ЛД-13', 2),
+    ('ИСиТ-12', 2),
+    ('ТЛиДП-11', 2),
+    
+    ('ИСиТ-13', 3),
+    ('СУЗиС-12', 3),
+    ('ЗиД-11', 3);
+    
+INSERT INTO `students`
+    (group_id, last_name, first_name, patronymic, age)
+VALUES   
+(1, 'Зорина', 'Варвара', 'Ивановна', 19),
+(1,  'Петрова', 'Вера', 'Макаровна', 18),
+(1, 'Демин', 'Тихон', 'Александрович', 17),
+(1, 'Казакова', 'Анна', 'Александровна',  19),
+(1, 'Игнатов', 'Семён', 'Никитич', 16),
+
+(2, 'Кузин', 'Лепс', 'Сергеевич', 19),
+(2,  'Латышев', 'Богдан', 'Александрович', 17),
+(2, 'Зайцев', 'Илья', 'Григорьевич', 17),
+(2, 'Петров', 'Михаил', 'Егорович',  18),
+(2, 'Игнатов', 'Семён', 'Виторович', 18),
+
+(3, 'Зверев', 'Владимир', 'Максимович', 18),
+(3,  'Зубкова', 'Аделина', 'Адамовна', 19),
+(3, 'Грибов', 'Матвей', 'Романович', 17),
+(3, 'Сергеев', 'Игорь', 'Михайлович',  17),
+(3, 'Антохин', 'Миша', 'Антонович', 17),
+
+(4, 'Евдокимова', 'Ксения', 'Богдановна', 18),
+(4,  'Басова', 'Ксения', 'Сергеевна', 18),
+(4, 'Лебедев', 'Тимофей', 'Львович', 19),
+(4, 'Сомова', 'Алия', 'Львовна',  17),
+(4, 'Сергеев', 'Тимофей', 'Артёмович', 17),
+
+(5, 'Соловьев', 'Дмитрий', 'Александрович', 18),
+(5,  'Абрамов', 'Кирилл', 'Денисович', 17),
+(5, 'Некрасова', 'Каролина', 'Ярославовна', 18),
+(5, 'Сергеев', 'Дмитрий', 'Иванович',  18),
+(5, 'Павлова', 'Милана', 'Марковна', 18),
+
+(6, 'Сахаров', 'Лев', 'Саввич', 20),
+(6,  'Максимов', 'Сергей', 'Павлович', 19),
+(6, 'Карасева', 'Анастасия', 'Дмитриевна', 22),
+(6, 'Никулина', 'Кира', 'Леоновна',  18),
+(6, 'Наумова', 'Елизавета', 'Михайловна', 18),
+
+(7,'Зуева', 'Лидия', 'Марковна', 18),
+(7, 'Попов', 'Николай', 'Максимович', 18),
+(7, 'Виноградова', 'Алёна', 'Артёмовна', 17),
+(7, 'Попов', 'Александр', 'Романович',  17),
+(7, 'Павлова', 'София', 'Степановна', 19),
+
+(8,'Жукова', 'Кристина', 'Михайловна', 18),
+(8, 'Дубровина', 'Елизавета', 'Павловна', 18),
+(8, 'Антонова', 'Ксения', 'Ивановна', 20),
+(8, 'Кузнецова', 'Мария', 'Михайловна',  18),
+(8, 'Сергеев', 'Матвей', 'Сергеевич', 17),
+
+(9,'Юдин', 'Владимир', 'Максимович', 17),
+(9, 'Попов', 'Матвей', 'Дмитриевич', 19),
+(9, 'Григорий', 'Лепс', 'Виторович', 18),
+(9, 'Джекман', 'Хью', 'Вовивич',  19),
+(9, 'Медведев', 'Паддингтон', 'Михайлович', 19);
+
     /*Получение всех19-летних*/
  SELECT
 	`last_name`,
@@ -127,10 +138,10 @@ FROM
 	`students`
 JOIN
 	`group`
-ON    
+ON
 	`students`.`group_id` = `group`.`group_id`
 WHERE
-	`students`.`group_id` = 8;
+	`students`.`group_id` = 9;
     
 /*Получение студентов по факультету*/
 SELECT
@@ -140,18 +151,18 @@ SELECT
 	`age`,
     `name_faculty`,
     `name_group`
-FROM
-	`faculty`
+FROM 
+	`students`
 JOIN
 	`group`
-ON    
-	`group`.`faculty_id` = `faculty`.`faculty_id`
+ON
+	`group`.`group_id` = `students`.`group_id`
 JOIN
-	`students`
-ON    
-	`students`.`group_id` = `group`.`group_id`    
+	`faculty`
+ON
+	`faculty`.`faculty_id` = `group`.`faculty_id`    
 WHERE
-	`faculty`.`faculty_id` = 2;    
+	`faculty`.`faculty_id` = 3;
     
 /*Получение информации о конкретном студенте*/
 SELECT
@@ -172,7 +183,7 @@ JOIN
 ON    
 	`students`.`group_id` = `group`.`group_id`    
 WHERE
-	`students`.`students_id` = 45;        
+	`students`.`students_id` = 45;      
     
 
  
