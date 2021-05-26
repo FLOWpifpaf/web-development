@@ -259,7 +259,6 @@
 
 .header__line
 {
-    clear: both;
     border: 1px solid transparent;
     height: 0px;
 }
@@ -528,8 +527,6 @@
     .block-movies__button
     {
         margin-right: 20px;
-        margin-bottom: 50px;
-        justify-content: center;
     }
 
     .form
@@ -558,14 +555,11 @@
     .form__content
     {
         width: 540px;
-        display: flex;
-        flex-direction: column;
     }
 
     .postscript
     {
         margin: 0;
-        background-color: #f9f9f9;
     }
 }
 
@@ -594,7 +588,6 @@
 
     .header__name
     {
-        margin-top: 0;
         color: #000;
     }
 
@@ -612,7 +605,6 @@
     {
         display: flex;
         justify-content: flex-start;
-        margin: 46px 0 50px;
     }
 }
 
@@ -736,7 +728,6 @@
 
     .storage__cinema
     {
-        display: inline-flex;
         justify-content: start;
         font-size: 36px;
     }
