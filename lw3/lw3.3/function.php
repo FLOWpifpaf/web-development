@@ -8,7 +8,7 @@ function getParameter(string $name): ?string
 function getIdenticalCharactersQuantity(string $password): int
 {
     $identicalCharactersQuantity = 0;
-    foreach (count_chars($password) as $number)
+    foreach (count_chars($password, 1) as $number)
     {
         if ($number > 1)
         {
