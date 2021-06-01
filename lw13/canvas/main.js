@@ -1,0 +1,5 @@
+
+window.onload = () => {
+    cartman();
+    kenny();
+}

@@ -1,0 +1,117 @@
+<svg height="300" width="160" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
+
+<!-- штаны -->
+  <rect x="33" y="268" width="104" height="22" fill="#3e75c7"/>
+
+<!-- тело -->
+  <path d="M 34 205
+           Q 20 220 15 250
+           L 30 255
+           L 28 270
+           Q 72 283 137 271
+           L 151 251
+           Q 145 215 128 203"
+           fill="#d26f5f"/>
+
+<!-- Левая рука -->
+<line x1="33" y1="248" x2="37" y2="233" stroke-width="0.7" stroke="#000" />
+<circle cx="23" cy="256" r="11.5" fill="#ff1f40"/>
+<circle cx="31" cy="252" r="5" fill="#ff1f40" stroke="#c9233c" stroke-width="1"/>
+
+<!-- правая рука -->
+<line x1="128" y1="235" x2="130" y2="251" stroke-width="0.7" stroke="#000" />
+<circle cx="142" cy="260" r="11.5" fill="#ff1f40"/>
+<circle cx="132" cy="256" r="5" fill="#ff1f40" stroke="#c9233c" stroke-width="1"/>
+
+<!-- Пуговицы -->
+  <line x1="85" y1="230" x2="83" y2="276" stroke-width="1.5" stroke="#000" />
+  <circle cx="78" cy="236" r="2" fill="#000"/>
+  <circle cx="78" cy="251" r="2" fill="#000"/>
+  <circle cx="77" cy="268" r="2" fill="#000"/>
+
+<!-- воротник -->
+  <path d="M 35 209 
+           Q 46 229 81 231 
+           Q 85 227 79 223 Z"
+           fill="#ac3545"/>   
+  <path d="M 35 208 
+           Q 46 228 81 230 
+           Q 85 226 79 222 Z"
+           fill="#ff1f41"/>
+  <ellipse cx="108" cy="221" rx="8" ry="27" fill="#ac3545" transform="rotate(65, 108, 221)"/>                                                                                   
+  <ellipse cx="108" cy="220" rx="8" ry="27" fill="#ff1f41" transform="rotate(65, 108, 220)"/> 
+    
+<!-- Голова -->
+  <circle cx="80" cy="150" r="73" fill="#ffecc1"/>
+
+<!-- Шапка -->
+  <path d="M 9 130 
+           C 30 50 124 50 155 125"
+           fill="#3f77c8"/>
+
+<!-- Козырек шапки -->
+  <path d="M 5 131
+           C 40 112 120 110 157 125
+           L 157 140
+           C 120 128 40 130 5 148 Z"
+           fill="#ff1f40"/>
+
+ <!-- Помпон -->
+  <rect x="71" y="54" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(-3.5, 70, 70)"/>
+  <rect x="72" y="53" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(18, 70, 70)"/>
+  <rect x="72" y="53" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(43, 70, 70)"/>
+  <rect x="70" y="51" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(65, 70, 70)"/>
+  <rect x="70" y="54" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(-70, 70, 70)"/>
+  <rect x="70" y="54" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(-95, 70, 70)"/>
+  <rect x="70" y="54" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(-50, 70, 70)"/>
+  <rect x="70" y="54" width="3" height="35" rx="1.5" ry="1.5" stroke-width="0.5" stroke="#b12b3f" fill="#fb1d3e" transform="rotate(-25, 70, 70)"/>   
+
+<!-- Брови -->
+  <line x1="49" y1="124" x2="33" y2="140" stroke-width="2" stroke="#3e3d43" stroke-linecap="round"/>
+  <line x1="109" y1="123" x2="125" y2="135" stroke-width="2" stroke="#3e3d43" stroke-linecap="round"/>
+
+<!-- левый глаз -->
+  <ellipse cx="62" cy="157" rx="20" ry="24" fill="#f1d9b7" transform="rotate(30, 62, 157)"/>
+  <ellipse cx="61" cy="158" rx="20" ry="24" fill="#fff" transform="rotate(30, 61, 158)"/>
+  <circle cx="69" cy="158" r="2"/>
+<!-- Правый глаз -->
+  <ellipse cx="103" cy="156" rx="20" ry="24" fill="#f1d9b7" transform="rotate(-30, 103, 156) "/>
+  <ellipse cx="104" cy="157" rx="20" ry="24" fill="#ffffff" transform="rotate(-30, 104, 157) "/>
+  <circle cx="94" cy="157" r="2"/>
+
+<!-- Рот -->
+<path d="M 65 195
+         Q 68 197 105 195
+         Q 105 198  86 212
+         Q 63 197  65 195"/>
+  <!-- зубы -->
+  <polygon points="70 197
+                   71 201
+                   77 201
+                   77 197"
+                   fill="#fff"/>
+  <polygon points="78 197
+                   79 201
+                   86 201
+                   86 197"
+                   fill="#fff"/>
+   <polygon points="87 197
+                    87 202
+                    93 201
+                    96 196"
+                    fill="#fff"/>
+   <polygon points="97 196
+                    94 201
+                    98 201
+                    103 196"
+                    fill="#fff"/>
+
+ <!-- Тапки -->
+  <path d="M 24 291
+           L 24 291 147 291
+           Q 100 283 85 288
+           Q 35 280 24 291"
+           stroke="#3e3d43"
+           fill="#332e32"/>
+</svg>
+
